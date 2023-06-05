@@ -32,10 +32,13 @@ The R files that have been attached to this repository contain all the codes tha
 
 The data of the fixtures of the sporting tournaments were obtained from reliable sources like basketballreference.com and espncricinfo.com.
 
-For the NBA, the Common Hierarchical Home-ground Advantage model was the highest of the order effects models that were statistically significant. For the period chosen for analysis, there were different levels of home-ground advantage against teams, based on their level of relationship in the hierarchy
+For the NBA, the Common Hierarchical Home-ground Advantage model was the highest of the order effects models that were statistically significant. For the period chosen for analysis, there were different levels of home-ground advantage against teams, based on their level of relationship in the hierarchy. 
+
 ![Significant Model](./Images/CHINBA.png)
 
+For the T20 Blast, the Team-specific Home-ground Advantage model was the highest of the order effects models that were statistically significant (although weakly). For the period chosen for analysis, there were different levels of home-ground advantage for teams. 
 
+![Significant Model](./Images/TSHGBlast.png)
 
 Simulation.R traces the steps taken to simulate the NBA playoffs of the 2022-23 season. However, this can be used to simulate any NBA playoffs with a regular home-and-away format, with a few changes.
 

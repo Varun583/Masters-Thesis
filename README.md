@@ -34,7 +34,7 @@ The data of the fixtures of the sporting tournaments were obtained from reliable
 
 For the NBA, the Common Hierarchical Home-ground Advantage model was the highest of the order effects models that were statistically significant. For the period chosen for analysis, there were different levels of home-ground advantage against teams, based on their level of relationship in the hierarchy. 
 
-![Significant Model] (./Images/CHINBA.png)
+![Significant Model](./Images/CHINBA.png)
 
 For the T20 Blast, the Team-specific Home-ground Advantage model was the highest of the order effects models that were statistically significant (although weakly). For the period chosen for analysis, there were different levels of home-ground advantage for teams. 
 

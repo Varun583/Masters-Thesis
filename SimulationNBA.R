@@ -91,20 +91,20 @@ BT_probabilities = function(df, R){
   for(i in 1:nrow(df)){
     df$Hierarchy[i] <- R[df[i,1],df[i,2]]
   }
-  df$A_prob <- NA
-  df$B_prob <- NA
+  df$Team_A_win <- NA
+  df$Team_B_win <- NA
   for(i in 1:nrow(df)){
     if (df$Hierarchy[i] == 3){
-      df$A_prob[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]]))
-      df$B_prob[i] <- exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]]))
+      df$Team_A_win[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]]))
+      df$Team_B_win[i] <- exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_3[Model_table$Teams == df[i,2]]))
     }
     if (df$Hierarchy[i] == 2){
-      df$A_prob[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]]))
-      df$B_prob[i] <- exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]]))
+      df$Team_A_win[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]]))
+      df$Team_B_win[i] <- exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_2[Model_table$Teams == df[i,2]]))
     }
     if (df$Hierarchy[i] == 1){
-      df$A_prob[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]]))
-      df$B_prob[i] <- exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]]))
+      df$Team_A_win[i] <- exp(Model_table$theta_values[Model_table$Teams == df[i,1]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]]))
+      df$Team_B_win[i] <- exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]])/(exp(Model_table$theta_values[Model_table$Teams == df[i,1]]) + exp(Model_table$theta_values_1[Model_table$Teams == df[i,2]]))
     }
   }
   return(df)
@@ -114,7 +114,7 @@ Simulation_Play_In_2 = function(df, R = NULL){
   # A small function to obtain the probabilities for a play-in tournament
   p <- BT_probabilities(df, R)
   for (i in 1:nrow(p)){
-    p$Home_win[i] <- rbinom(1, 1, p$B_prob)
+    p$Home_win[i] <- rbinom(1, 1, p$Team_B_win)
   }
   return(p)
 }
@@ -187,4 +187,4 @@ PlayInTournament_2 = function(df, R){
 }
 
 
-# Obtain the probabilities for the regular season's fixtures using BT_probabilities(). After obtaining the probabilities, the same process as Simulation.R continues, with a few changes. 
+# Obtain the probabilities for the regular season's fixtures using BT_probabilities(). After obtaining the probabilities, the same process as Simulation.R continues.

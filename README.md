@@ -4,7 +4,7 @@ The repository contains the code used to obtain the results for my Master's thes
 R packages required: dplyr and ggplot2
 
 ## Introduction
-The Bradley-Terry model has been popular, facilitating pairwise comparisons, but also in various other fields. There have been many attempts to improve the initial Bradley-Terry model, proposed by Bradley and Terry, and some of these attempts are successful. Some of the extensions include:
+The Bradley-Terry model has been popular, facilitating pairwise comparisons, not only in sports, but also in various other fields. There have been many attempts to improve the initial Bradley-Terry model, proposed by Bradley and Terry, and some of these attempts are successful. Some of the extensions include:
 - Modelling Ties
 - Modelling Order Effects
 - Modelling External Covariates

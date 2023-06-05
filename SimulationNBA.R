@@ -57,7 +57,7 @@ Log_Like_deriv3_1 = function(theta, mat, R){
 # Here, mat is the win-loss matrices for the 2022-23 season. After obtaining the optimal values for theta, we format them into a table
 
 # Simulation Ready Data for 2022 season - Obtaining Theta Values
-Model = optim(par = theta3, fn = Log_Like3_1, gr = Log_Like_deriv3_1, method = "BFGS", mat = mat2, R = R)
+Model = optim(par = rep(0, ntheta(mat,3,R)), fn = Log_Like3_1, gr = Log_Like_deriv3_1, method = "BFGS", mat = mat2, R = R)
 # This optim function churns out alpha parameters equal to 0
 
 Table = function(Model, Teams){

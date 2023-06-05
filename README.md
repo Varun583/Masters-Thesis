@@ -12,7 +12,7 @@ The Bradley-Terry model has been popular, facilitating pairwise comparisons, not
 At the moment, we would like to explore the order effects, like the homeground advantage and many levels attached to it, in sporting scenarios. We would also like to incorporate neutral venue scenarios in our coding, such that, while measuring the order effect, one can also model games where there are no order effects.
 
 ## Models
-Chapter 2 of the thesis gives a very clear picture on the mathematical formulation of the Bradley-Terry models we have built during the course of this thesis. The list of the models are given below:
+Chapter 2 of the thesis gives a very clear picture on the mathematical formulation of the Bradley-Terry models we have built during the course of this thesis period. The list of the models are given below:
 - Vanilla Bradley-Terry Model (The original Bradley-Terry model with no order effects)
 - Common Home-ground Advantage Model
 - Common Hierarchical Home-ground Advantage Model

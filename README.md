@@ -33,7 +33,7 @@ The R files that have been attached to this repository contain all the codes tha
 The data of the fixtures of the sporting tournaments were obtained from reliable sources like basketballreference.com and espncricinfo.com.
 
 For the NBA, the Common Hierarchical Home-ground Advantage model was the highest of the order effects models that were statistically significant. For the period chosen for analysis, there were different levels of home-ground advantage against teams, based on their level of relationship in the hierarchy
-(.\Images\CHINBA.png)
+[!Significant Model](.\Images\CHINBA.png)
 
 
 

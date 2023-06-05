@@ -25,8 +25,8 @@ For the hypothesis testing of these nested models, the Likelihood Ratio Test sta
 
 The R files that have been attached to this repository contain all the codes that have been used to obtain the results for all the models.
 
-- Functions.R provides all the functions that have been built for the thesis.
-- Implementation.R provides the main functions that have been used to obtain the results for the thesis.
+- Functions.R contains all the models that have been built for the thesis.
+- Implementation.R contains the main functions that have been used to obtain the results for the thesis.
 
 ## Results
 

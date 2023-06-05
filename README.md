@@ -1,5 +1,5 @@
 # Masters-Thesis
-The repository contains the code used to obtain the results for my Master's thesis on Extended Bradley-Terry Models. Models have been built on sporting tournaments data, which are available in the 'Data' folder. Some of the relevant graphs can be found in the 'Images' folder.
+The repository contains the code used to obtain the results for my Master's thesis on Extended Bradley-Terry Models. Models have been built on sporting tournaments' data, which are available in the 'Data' folder. Some of the relevant graphs can be found in the 'Images' folder.
 
 R packages required: dplyr and ggplot2
 

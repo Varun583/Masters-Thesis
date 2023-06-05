@@ -171,7 +171,7 @@ Simulation_Playoff_East = function(df, SE, Probabilities){
 }
 
 Seeds_West = function(Seeds){
-  # Seeds_Wast takes the output from PlayInTournament() and gives the appropraie seeding for the 10 teams in the West. An example of this season's seeding. 
+  # Seeds_West takes the output from PlayInTournament() and gives the appropraie seeding for the 10 teams in the West. An example of this season's seeding. 
   Seed_No <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
   Team <- c("Denver Nuggets", "Memphis Grizzlies", "Sacramento Kings", "Phoenix Suns", "Los Angeles Clippers", "Golden State Warriors", Seeds[2,2], Seeds[4,2], Seeds[6,2], Seeds[8,2])
   Seeds_West <- data.frame(Seed_No, Team)
@@ -181,7 +181,7 @@ Seeds_West = function(Seeds){
 Simulation_Playoff_West = function(df, SW, Probabilities){
 # df is the fixture list of the Western Conference playoffs without the play-in teams added with two columns "Team A" and "Team B". Team A has the higher seed in this fixture list.
 # Probabilities is the results of BT_predict for the entire season
-# SE is the Seeds of the Eastern Conference obtained from Seeds_East
+# SW is the Seeds of the Western Conference obtained from Seeds_West
   p <- df
   p[1,2] <- SW[8,2]
   p[2,2] <- SW[7,2]
@@ -257,6 +257,7 @@ Simulation_Playoff_West = function(df, SW, Probabilities){
 }
 
 Seeds_Tournament = function(){
+  # Seeds of the entire league with an example of the 2022-23 season
   Seed_No <- c(1:20)
   Team <- c("Milwaukee Bucks", "Boston Celtics", "Philadelphia 76ers", "Denver Nuggets", "Memphis Grizzlies", "Cleveland Cavaliers", "Sacramento Kings", "New York Knicks", "Phoenix Suns", "Brooklyn Nets", "Miami Heat", "Los Angeles Clippers", "Golden State Warriors", "Los Angeles Lakers", "Minnesota Timberwolves", "New Orleans Pelicans", "Atlanta Hawks", "Toronto Raptors", "Chicago Bulls", "Oklahoma City Thunder")
   Seeds_Tournament <- data.frame(Seed_No, Team)

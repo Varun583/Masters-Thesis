@@ -187,4 +187,4 @@ PlayInTournament_2 = function(df, R){
 }
 
 
-# Obtain the probabilities for the regular season's fixtures using BT_probabilities(). After obtaining the probabilities, the same process as Simulation.R continues. 
+# Obtain the probabilities for the regular season's fixtures using BT_probabilities(). After obtaining the probabilities, the same process as Simulation.R continues, with a few changes. 

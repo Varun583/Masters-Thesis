@@ -36,10 +36,18 @@ For the NBA, the Common Hierarchical Home-ground Advantage model was the highest
 
 ![Significant Model](./Images/CHINBA.png)
 
-For the T20 Blast, the Team-specific Home-ground Advantage model was the highest of the order effects models that were statistically significant (although weakly). For the period chosen for analysis, there were different levels of home-ground advantage for teams. 
+For the T20 Blast, the Team-specific Home-ground Advantage model was the highest of the order effects models that were statistically significant (although weakly). For the period chosen for analysis, there were different levels of home-ground advantage for teams. More of this will be explored in the thesis copy attached.
 
 ![Significant Model](./Images/TSHGBlast.png)
+
+## Simulation
+
+We run simulations of the 2023 season of the NBA playoffs, using a slightly different approach, as discussed in Chapter 5.
 
 Simulation.R traces the steps taken to simulate the NBA playoffs of the 2022-23 season. However, this can be used to simulate any NBA playoffs with a regular home-and-away format, with a few changes.
 
 SimulationNBA.R introduces the basic steps of the simulation of the NBA playoffs of the 2022-23 season, as a different approach is taken, as mentioned in the thesis. 
+
+For the current season, according to the Bradley-Terry model, the Milwaukee Bucks were the most likely to win the NBA championship.
+
+![Significant Model](./Images/NBA Champ.png)

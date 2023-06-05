@@ -30,7 +30,8 @@ The R files that have been attached to this repository contain all the codes tha
 
 ## Results
 
-The data of the fixtures of the sporting tournaments were obtained from reliable sources like basketballreference.com and espncricinfo.com
+The data of the fixtures of the sporting tournaments were obtained from reliable sources like basketballreference.com and espncricinfo.com.
+
 For the NBA, the Common Hierarchical Home-ground Advantage model was the highest of the order effects models that were statistically significant.
 
 

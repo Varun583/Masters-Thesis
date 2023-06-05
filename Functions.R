@@ -20,6 +20,7 @@ DesiredFormatNBA = function(df){
 # We choose the appropriate games and change the 6th column value to 0 after the function has been executed.
 
 DesiredFormatBlast = function(df){
+  # Convert the T20 Blast Data as shown in image to n x 6 matrix where the columns are mentioned like below.
   Blast <- data.frame(matrix(ncol=6, nrow = nrow(df), dimnames=list(NULL, c("Team A", "Team B", "Team A win", "Team B win", "Team A home", "Team B home"))))
   my_range <- 1:nrow(df)
   for(i in my_range){  
@@ -68,15 +69,15 @@ DesiredFormatBlast = function(df){
 # Some additional formatting has been done to make the data more formal
 
 Data2Mat = function(df){
-  # Data frame should have the columns 'Team.A', 'Team.B', 'Team.A.win', 'Team.B.win', 'Team.A.Home', 'Team.B.Home', as in the desired format
+  # Data frame should have the columns 'Team.A', 'Team.B', 'Team.A.win', 'Team.B.win', 'Team.A.Home', 'Team.B.Home', as the desired format
   # This function then returns the h, w, nw, l and nl matrices required for our BT package.
   # In the NBA data, Team B was always the home team. Hence, essentially, 'Team.A.Home' is a column of 0s.
   
   Teams = unique(df$Team.B)
   
-  df[,'Team.A.win'] = as.numeric(df[,'Team.A.win'])
-  df[,'Team.B.win'] = as.numeric(df[,'Team.B.win'])
-  df[,'Team.B.home'] = as.numeric(df[,'Team.B.home'])
+  df[,3] = as.numeric(df[,3])
+  df[,4] = as.numeric(df[,4])
+  df[,6] = as.numeric(df[,6])
   
   w = matrix(data = 0, nrow = length(Teams), ncol = length(Teams), dimnames = list(Teams, Teams))
   l = matrix(data = 0, nrow = length(Teams), ncol = length(Teams), dimnames = list(Teams, Teams))

@@ -49,6 +49,6 @@ Simulation.R traces the steps taken to simulate the NBA playoffs of the 2022-23 
 
 SimulationNBA.R introduces the basic steps of the simulation of the NBA playoffs of the 2022-23 season, as a different approach is taken, as mentioned in the thesis. 
 
-For the current season, according to the Bradley-Terry model, the Milwaukee Bucks were the most likely to win the NBA championship.
+For the 2023 season, according to the Bradley-Terry model, the Milwaukee Bucks were the most likely to win the NBA championship.
 
 ![Significant Model](./Images/NBAChamp.png)

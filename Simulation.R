@@ -57,7 +57,7 @@ PlayInTournament = function(model, df, R = NULL){
   New[,3:4] <- NA
   New[,3] <- 0
   New[,4] <- 0
-  Final <- Simulation_Play_In(model,New,R)
+  Final <- Simulation_Play_In(model,New,R=NULL)
   New <- rbind(p[1:4,],Final)
   if (Final$Home_win[1] == 1){
     Seeds$Teams[3] <- Final[1,2]
@@ -303,14 +303,14 @@ Simulation_Final = function(df, Probabilities){
 
 NBA <- function(){
 #Combining all the functions to obtain results of the simulations
-  Seeds <- PlayInTournament(Model, fixtures, R)
+  Seeds <- PlayInTournament(Model, fixtures, R = NULL)
   SE = Seeds_East(Seeds)
-  East <- Simulation_Playoff_East(Playoffs_East, SE, Probs)
+  East <- Simulation_Playoff_East(Playoffs_East, SE, Probabilities)
   SW = Seeds_West(Seeds)
-  West <- Simulation_Playoff_West(Playoffs_West, SW, Probs)
+  West <- Simulation_Playoff_West(Playoffs_West, SW, Probabilities)
   ST = Seeds_Tournament()
   Champions = Final(East, West, ST)
-  Championship <- Simulation_Final(Champions, Probs)
+  Championship <- Simulation_Final(Champions, Probabilities)
   Output <- data.frame(East)
   colnames(Output) <- c("Team.A", "Team.B", "Home_Win", "Winner")
   Output[8:14,] <- West

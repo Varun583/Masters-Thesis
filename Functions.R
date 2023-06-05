@@ -266,6 +266,8 @@ NBA_R = function(fixtures){
   return(R)
 }
 
+R <- NBA_R(fixtures)
+
 # Relationship Matrix for the T20 Blast when we input the formatted fixtures 
 Blast_R = function(fixtures){
   data = fixtures
@@ -302,6 +304,8 @@ Blast_R = function(fixtures){
   R_Blast = G + L_Blast
   return(R_Blast)
 }
+
+R_Blast = Blast_R(fixtures)
 
 # Defining a log-likelihood function - Common Hierarchical model 
 Log_Like3 = function(theta, mat, R){

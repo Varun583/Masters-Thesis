@@ -51,7 +51,7 @@ BT_Model = function(matrix, Model_type, R = NULL){
   }
   
   if(Model_type == 'TSH'){
-    theta = rep(0,ntheta(matrix, 4, R))
+    theta = rep(0,ntheta(matrix, 4))
     Model = optim(par = theta, fn = Log_Like4, gr = Log_Like_deriv4, mat = matrix, method = 'BFGS')
     
     least = teams[which.min(Model$par[1:length(teams)])]
@@ -86,7 +86,7 @@ BT_Model = function(matrix, Model_type, R = NULL){
   }
   
   if(Model_type == 'PAI'){
-    theta = rep(0,ntheta(matrix, 6, R))
+    theta = rep(0,ntheta(matrix, 6))
     Model = optim(par = theta, fn = Log_Like6, gr = Log_Like_deriv6, mat = matrix, method = 'BFGS')
     
     least = teams[which.min(Model$par[1:length(teams)])]

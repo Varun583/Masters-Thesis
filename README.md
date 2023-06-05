@@ -19,6 +19,7 @@ Chapter 2 of the thesis gives a very clear picture on the mathematical formulati
 - Team-specific Home-ground Advantage Model
 - Hierarchical Home-ground Advantage Model
 - Pairwise Home-ground Advantage Model
+
 For the hypothesis testing of these nested models, the Likelihood Ratio Test statistic has been used. 
 
 ## Implementation

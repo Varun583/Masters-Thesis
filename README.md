@@ -50,4 +50,4 @@ SimulationNBA.R introduces the basic steps of the simulation of the NBA playoffs
 
 For the current season, according to the Bradley-Terry model, the Milwaukee Bucks were the most likely to win the NBA championship.
 
-![Significant Model](./Images/NBA Champ.png)
+![Significant Model](./Images/NBAChamp.png)

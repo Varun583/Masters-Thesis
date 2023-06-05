@@ -278,7 +278,7 @@ Final = function(East, West, ST){
 }
 
 Simulation_Final = function(df, Probabilities){
-# df is the output from the function Final(), which adjusts the seeding to obtain home ground advantage
+# df is the output from the function Final(), which adjusts the seeding to obtain the extra home court game
   p <- df
   p$Home_Win <- NA
   p$Winner <- NA

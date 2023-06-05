@@ -499,6 +499,7 @@ Log_Like_deriv6 = function(theta, mat){
 }
 
 PCT_Table <- function(matrix){
+  #Returns the wins and losses of the teams, along with their winning percentage
   Wins <- NA
   Losses <- NA
   Teams <- matrix$Teams
@@ -513,6 +514,7 @@ PCT_Table <- function(matrix){
 }
 
 Home_Table <- function(matrix){
+  #Returns the home wins and losses of the teams, along with their home winning percentage
   Home_Wins <- NA
   Home_Losses <- NA
   Teams <- matrix$Teams

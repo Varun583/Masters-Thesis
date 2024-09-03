@@ -308,7 +308,7 @@ BT_plots = function(model){
   
   if(model$type == 'TSH'){
     # Team-specific Home-ground Advantage Model
-    table = data.frame(teams = model$Teams, model$Table, home = NA)
+    table = data.frame(teams = model$Teams, Theta = model$Table, home = NA)
     for (i in 1:nrow(model$Table)){
       table$home[i] <- model$Table[i,] + model$Alpha[i,]
     }

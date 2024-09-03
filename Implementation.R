@@ -285,7 +285,7 @@ BT_plots = function(model){
   if(model$type == 'CHI'){
     # Common Hierarchical Home-ground Advantage Model
     for(i in model$Alpha[,]){
-      table = data.frame(teams = model$Teams, Theta = model$Theta[,], home = model$Theta[,] + i)
+      table = data.frame(teams = model$Teams, Theta = model$Table[,], home = model$Table[,] + i)
       Teams = model$Teams
       Theta = table[order(-table$Theta),]
       print(Theta %>%
@@ -308,9 +308,9 @@ BT_plots = function(model){
   
   if(model$type == 'TSH'){
     # Team-specific Home-ground Advantage Model
-    table = data.frame(teams = model$Teams, model$Theta, home = NA)
-    for (i in 1:nrow(model$Theta)){
-      table$home[i] <- model$Theta[i,] + model$Alpha[i,]
+    table = data.frame(teams = model$Teams, model$Table, home = NA)
+    for (i in 1:nrow(model$Table)){
+      table$home[i] <- model$Table[i,] + model$Alpha[i,]
     }
     Teams = model$Teams
     Theta = table[order(-table$Theta),]
@@ -334,7 +334,7 @@ BT_plots = function(model){
   if(model$type == "HIE"){
     # Hierarchical Home-ground Advantage Model
     for(i in 1:ncol(model$Alpha)){
-      table = data.frame(teams = model$Teams, Theta = model$Theta[,], home = model$Theta[,] + model$Alpha[,i])
+      table = data.frame(teams = model$Teams, Theta = model$Table[,], home = model$Table[,] + model$Alpha[,i])
       Teams = model$Teams
       Theta = table[order(-table$Theta),]
       print(Theta %>%
